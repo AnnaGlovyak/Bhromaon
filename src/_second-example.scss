@@ -1,0 +1,80 @@
+.second-example {
+    width: 100%;
+    background-image: url(img/book-now-spain-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+
+    &__container {
+        max-width: 1110px;
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 230px;
+    }
+
+    &__block {
+        float: right;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+
+    .second-example {
+    
+        &__container {
+            max-width: 900px;
+        }
+    
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .second-example {
+    
+        &__container {
+            max-width: 760px;
+        }
+    
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .second-example {
+    
+        &__container {
+            max-width: 540px;
+        }
+
+        &__block {
+            float: none;
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+
+    .second-example {
+        height: 50vh;
+    
+        &__container {
+            max-width: 300px;
+            padding-top: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 540px) and (min-resolution: 2dppx) {
+
+    .second-example {
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        &__container {
+            max-width: 300px;
+            width: 100%;
+            padding-top: 0;
+        }
+    }
+}

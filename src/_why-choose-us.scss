@@ -1,0 +1,180 @@
+.why-choose-us {
+    width: 100%;
+    background-image: url(img/why-choose-us-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 686px;
+    
+
+    &__content {
+        max-width: 1110px;
+        width: 100%;
+        min-height: 445px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 120px;
+    }
+
+    &__description {
+        min-height: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 68px;
+    }
+
+    &__title {
+        font-size: $font-size-article-title;
+        font-family: $font-family-aleo;
+        color: $color-white;
+        margin-bottom: 30px;
+        text-transform: capitalize;
+    }
+
+    &__paragraf {
+        @include paragraf;
+        width: 540px;
+    }
+
+    &__button {
+        margin-top: 10px;
+    }
+
+    &__button:hover {
+        background-color: $color-white;
+        color: $color-blue;
+    }
+
+    &__images {
+        max-width: 475px;
+        width: 100%;
+    }
+}
+
+.image {
+
+    &--right {
+        float: right;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+
+    .why-choose-us {
+
+        &__content {
+            max-width: 900px;
+
+        }
+    
+        &__images {
+            max-width: 450px;
+        }
+    }
+
+    .image {
+
+        &--right {
+            float: none;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 980px) {
+
+    .why-choose-us {
+
+        &__content {
+            max-width: 760px;
+
+        }
+
+        &__description {
+            padding-top: 0;
+        }
+
+        &__paragraf {
+            @include paragraf;
+            width: 360px;
+        }
+    
+        &__images {
+            max-width: 360px;
+        }
+    }
+}
+
+@media screen and (max-width: 780px) {
+
+    .why-choose-us {
+
+        &__content {
+            max-width: 540px;
+
+        }
+
+        &__paragraf {
+            @include paragraf;
+            width: 270px;
+        }
+    
+        &__images {
+            max-width: 250px;
+        }
+    }
+    .image {
+        width: 250px;
+        padding-top: 10px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+
+    .why-choose-us {
+        height: 70vh;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: space-around;
+
+        &__content {
+            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+            padding-top: 50px;
+
+        }
+
+        &__paragraf {
+            @include paragraf;
+            width: 300px;
+        }
+    
+        &__images {
+            max-width: 300px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    .image {
+        width: 140px;
+        padding-top: 40px;
+    }
+}
+
+@media screen and (max-width: 540px) and (min-resolution: 2dppx) {
+
+    .why-choose-us {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        &__content {
+            padding-top: 0;
+
+        }     
+    }
+}

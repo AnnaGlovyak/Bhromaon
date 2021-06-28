@@ -1,0 +1,75 @@
+$color-blue: #5474fd;
+$color-white: #ffffff;
+$color-dirty-white: #fefefe;
+$color-orange: #ff6363;
+$color-grey: #e8e8e8;
+$color-darck-grey: #999999;
+$color-dark-bg: #333333;
+$article-bg-color: rgba(#232323, 0.9);
+$footer-bg: #232323;
+$color-icon-like: #00a2ff;
+
+$font-family-aleo: 'Aleo', serif;
+$font-family-josefin: 'Josefin Sans', sans-serif;
+
+$font-size-logo-bg: 48px;
+$font-size-logo-nav: 24px;
+$font-size-nav-items: 14px;
+$font-size-home-under-title: 22px;
+$font-size-article-country: 20px;
+$font-size-burger-menu: 20px;
+$font-size-article-title: 36px;
+$font-size-article-description: 16px;
+$font-size-article-author: 30px;
+
+@mixin paragraf {
+    font-size: $font-size-article-description;
+    font-family: $font-family-josefin;
+    color: $color-grey;
+    font-weight: 300;
+    letter-spacing: -0.6px;
+    // margin-top: 40px;
+    line-height: 26px;
+}
+
+.btn {
+    display: block;
+    max-width: 225px;
+    width: 100%;
+    height: 60px;
+    background-color: $color-blue;
+    border: none;
+    border-width: none;
+    border-style: none;
+    border-color: none;
+    border-image: none;
+    font-family: $font-family-aleo;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    color: $color-white;
+    text-decoration: none;
+    text-align: center;
+    margin: 0em;
+    font: none;
+    padding: 0;
+    font-size: $font-size-article-description;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+@media screen and (max-width: 540px) {
+    .btn {
+        max-width: 300px;
+    
+
+        &__icon {
+            font-size: 4em;
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+
+    

@@ -1,0 +1,186 @@
+.what-tourist-say {
+    width: 100%;
+    background-image: url(img/what-turists-say-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 732px;
+
+    &__content {
+        max-width: 1110px;
+        width: 100%;
+        height: 414px;
+        margin: 0 auto;
+        padding-top: 118px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: $font-size-article-title;
+        color: $color-white;
+        font-family: $font-family-aleo;
+        text-transform: capitalize;
+    }
+}
+
+.article {
+    width: 100%;
+    height: auto;
+    background-color: $color-dark-bg;
+    display: flex;
+    max-height: 285px;
+
+    &__content {
+        padding: 50px;
+        padding-left: 60px;
+    }
+
+
+    &__title {
+        font-size: $font-size-article-country;
+        color: $color-dirty-white;
+        text-transform: uppercase;
+        letter-spacing: -0.6px;
+        padding-bottom: 30px;
+    }
+
+    &__paragraf {
+        @include paragraf;
+        margin-top: -10px;
+    }
+}
+.empty-span {
+    padding-right: 30px;
+
+}
+.fa-quote-left::before {
+    color: $color-blue;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 1150px) {
+
+    .what-tourist-say {
+
+        &__content {
+            max-width: 900px;
+        }
+    }
+
+    .article {
+        
+        height: 400px;
+
+        &__content {
+            padding: 20px;
+            padding-left: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 980px) {
+
+    .what-tourist-say {
+
+        &__content {
+            max-width: 760px;
+        }
+    }
+
+    .article {
+        
+        height: 500px;
+
+        &__content {
+            padding: 20px;
+            padding-left: 20px;
+        }
+
+        &__image {
+            height: auto;
+            width: 360px;
+            object-fit: cover;
+        }
+    }
+}
+
+@media screen and (max-width: 780px) {
+   
+    .what-tourist-say {
+
+        &__content {
+            max-width: 540px;
+        }
+    }
+
+    .article {
+
+        &__content {
+            padding: 10px;
+            padding-left: 10px;
+        }
+
+        &__image {
+            width: 200px;
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+
+    .what-tourist-say {
+        height: auto;
+
+        &__content {
+            max-width: 300px;
+            height: 70vh;
+            padding-top: 30px;
+        }
+        &__title {
+            text-align: center;
+            font-size: 3em;
+        }
+    }
+
+    .article {
+        flex-direction: column;
+        max-height: 600px;
+
+        &__content {
+            padding: 10px;
+            padding-left: 10px;
+        }
+
+        &__title {
+            text-align: center;
+        }
+
+        &__image {
+            width: 100%;
+            height: 100px;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media screen and (max-width: 540px) and (min-resolution: 2dppx) {
+
+    .what-tourist-say {
+        height: 100vh;
+
+        &__content {
+            height: 100vh;
+            padding-top: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        &__title {
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+}

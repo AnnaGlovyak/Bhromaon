@@ -1,0 +1,124 @@
+.first-example {
+    width: 100%;
+    background-image: url(img/book-now-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+
+    &__container {
+        max-width: 1110px;
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 230px;
+    }
+
+}
+.book-now-block {
+    width: calc(540px - 60px);
+    height:calc(371px - 100px);
+    background-color: $article-bg-color;
+    padding: 50px 30px;
+    color: $color-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__country,&__title {
+        font-size: $font-size-article-country;
+        font-family: $font-family-josefin;
+        color: $color-grey;
+        font-weight: 300;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        margin-top: 5px;
+        letter-spacing: -0.6px;
+    }
+
+    &__paragraf {
+        @include paragraf;
+    }
+
+    &__button {
+        margin-top: 20px;
+    }
+
+    &__button:hover {
+        background-color: $color-white;
+        color: $color-blue;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+
+    .first-example {
+    
+        &__container {
+            max-width: 900px;
+        }
+    
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .first-example {
+    
+        &__container {
+            max-width: 760px;
+        }
+    
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .first-example {
+    
+        &__container {
+            max-width: 540px;
+        }
+    }
+    .book-now-block {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 540px) {
+
+    .first-example {
+        height: 50vh;
+    
+        &__container {
+            max-width: 300px;
+            padding-top: 30px;
+        }
+    }
+
+    .book-now-block {
+        width: calc(300px - 20px);
+        height:calc(300px - 40px);
+        padding: 20px 10px;
+    }
+}
+
+@media screen and (max-width: 540px) and (min-resolution: 2dppx) {
+
+    .first-example {
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        &__container {
+            max-width: 300px;
+            width: 100%;
+            padding-top: 0;
+        }
+    }
+
+    .book-now-block {
+        width: calc(300px - 20px);
+        height:calc(50vh - 20px);
+        padding: 5px 5px;
+    }
+}

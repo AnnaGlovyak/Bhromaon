@@ -1,0 +1,219 @@
+.header {
+    width: 100%;
+    height: 80px;
+    background-color: $color-blue;
+    color: $color-white;
+
+    &__content {
+        max-width: 1110px;
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 28px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    &__logo {
+        font-family: $font-family-josefin;
+        font-size: $font-size-logo-nav;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+}
+
+.navigation {
+       max-width: 540px;
+       width: 100%;
+       box-sizing: border-box;
+
+    &__list {
+       display: flex;
+       justify-content: space-between;
+    }
+    
+    &__item {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    &__link {
+        font-family: $font-family-aleo;
+        color: $color-white;
+        font-size: $font-size-nav-items;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+
+    &__item:hover >  &__link {
+        transition-duration: 500ms;
+        border-bottom: 2px solid $color-white;
+        padding-bottom: 10px;
+
+    }
+}
+
+// burger-menu--begin styles
+.burger-checkbox {
+    display: none;
+  }
+  
+  .burger__btn {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    width: 25px;
+    height: 21px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  .burger-layers, .burger-layers::before, .burger-layers::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transition-duration: .25s;
+  }
+  
+  .burger-layers::before {
+    content: '';
+    top: -6px;
+  }
+  
+  .burger-layers::after {
+    content: '';
+    top: 6px;
+  }
+  
+  #burger-checkbox:checked~.burger__btn > .burger-layers {
+    transform: rotate(45deg);
+    background-color: $color-blue;
+  }
+  #burger-checkbox:checked~.burger__btn > .burger-layers::before {
+    top: 0;
+    transform: rotate(0);
+    background-color: $color-blue;
+  }
+  #burger-checkbox:checked~.burger__btn > .burger-layers::after {
+    top: 0;
+    transform: rotate(90deg);
+    background-color: $color-blue;
+  }
+  #burger-checkbox:checked~.burger-menu__canvas {
+    transform: scale(1);
+  }
+  .burger-menu {
+    position: absolute;
+    display: none;
+    top: -4px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    // max-width: 780px;
+    margin: 0 auto;
+    font-family: $font-family-aleo;
+
+      &__canvas {
+        display: block;
+        position: absolute;
+        transform: scale(0);
+        // padding: 30px 30px 30px 30px;
+        width: 100%;
+        border-radius: 10px;
+        background-color: #fff;
+        top: 11px;
+        right: 0;
+        list-style: none;
+        text-align: center;
+        transition-duration: .25s;
+        
+      }
+
+      &__item {
+        display: block;
+        text-decoration: none;
+        transition-duration: .25s;
+        width: 400px;
+        margin: 0 auto;
+        text-transform: uppercase;
+        
+      }
+      &__link:hover {
+        color: $color-dark-bg;
+      }
+      &__link {
+        text-decoration: none;
+        color: $color-blue;
+        font-size: $font-size-burger-menu;
+        font-weight: bold;
+        line-height: 98px;
+      }
+  }
+ 
+
+//   burger-menu--end styles
+
+@media screen and (max-width: 1150px) {
+
+    .header__content {
+        max-width: 900px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+
+    .header__content {
+        max-width: 760px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+
+    .header {
+
+        &__content {
+            max-width: 540px;
+        }
+
+        &__logo {
+            font-size: 1.8em;
+
+        }
+    }
+
+    .navigation {
+ 
+        &__list {
+            display: none;
+        }
+    }
+
+    .burger-menu {
+        display: block;
+    }
+    
+}
+
+@media screen and (max-width: 540px) {
+
+    .header {
+        height: 10vh;
+
+        &__content {
+            max-width: 300px;
+        }
+    }
+
+    .burger-menu {
+
+        &__item {
+            width: 200px;
+        }
+    }
+}

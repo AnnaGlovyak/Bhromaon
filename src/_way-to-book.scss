@@ -1,0 +1,221 @@
+.way-to-book {
+    width: 100%;
+    background-color: $color-dark-bg;
+    height: 337px;
+
+    &__content {
+        max-width: calc(1110px - 132px);
+        width: 100%;
+        margin: 0 auto;
+        padding-left: 66px;
+        padding-right: 66px;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 75px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__content::before, &__content::after {
+        content: '';
+        display: block;
+        content: '';
+        width: 466px;
+        height: 388px;
+        border-top: 2px dotted rgba($color: #ffffff, $alpha: 0.5);
+        border-right: 2px dotted rgba($color: #ffffff, $alpha: 0.5);
+        border-left: 2px dotted rgba($color: #ffffff, $alpha: 0.5);
+        -webkit-border-radius: 300px 300px 0 0;
+        position: absolute;
+        top: 46px;
+        left: 130px;
+        z-index: 1;
+
+    }
+    &__content::after {
+        top: 46px;
+        left: 518px;
+    }
+
+    &__item {
+        height: 149px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+        z-index: 2;
+        
+    }
+
+    &__title {
+        font-family: $font-family-aleo;
+        color: $color-grey;
+        font-size: $font-size-article-title;
+        background-color: $color-dark-bg;
+        z-index: 3;
+    }
+
+    &__icon {
+        height: auto;
+        text-align: center;
+        background-color: $color-dark-bg;
+        z-index: 4;
+    }
+
+    &__icon-search {
+        fill: $color-blue;
+        width: 72px;
+    }
+
+    &__icon-check {
+        fill: $color-orange;
+        background-color: $color-dark-bg;
+        width: 72px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    &__icon-like {
+        fill: $color-icon-like;
+        width: 60px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+
+    .way-to-book {
+
+        &__content {
+            max-width: calc(900px - 132px);
+        }
+
+        &__content::before, &__content::after {
+            
+            width: 300px;
+            height: 180px;
+            top: 46px;
+            left: 156px;
+    
+        }
+        &__content::after {
+            top: 46px;
+            left: 438px;
+        }
+    }
+}
+
+@media screen and (max-width: 980px) {
+
+    .way-to-book {
+
+        &__content {
+            max-width: calc(760px - 60px);
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        &__content::before, &__content::after {
+            
+            width: 300px;
+            top: 46px;
+            left: 111px;
+    
+        }
+        &__content::after {
+            top: 46px;
+            left: 354px;
+        }
+    }
+}
+
+@media screen and (max-width: 780px) {
+
+    .way-to-book {
+
+        &__content {
+            max-width: calc(540px - 40px);
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        &__content::before, &__content::after {
+            
+            width: 255px;
+            height: 151px;
+            top: 46px;
+            left: 45px;
+    
+        }
+        &__content::after {
+            top: 46px;
+            left: 230px;
+        }
+
+        &__title {
+            font-size: 2em;
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+
+    .way-to-book {
+        height: 80vh;
+
+        &__content {
+            max-width: calc(300px - 20px);
+            padding-left: 10px;
+            padding-right: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding-top: 30px;
+        }
+
+        &__content::before, &__content::after {
+            
+            width: 178px;
+            height: 138px;
+            top: 130px;
+            transform: rotate(-90deg);
+            left: 11px;
+            
+        }
+
+        &__content::after {
+            top: 330px;
+            left: 134px;
+            transform: rotate(90deg);
+        }
+
+        &__item {
+            padding-top: 30px;
+        }
+        
+        &__title {
+            font-size: 3em;
+        }
+    }
+}
+
+@media screen and (max-width: 540px) and (min-resolution: 2dppx) {
+
+    .way-to-book {
+        height: 100vh;
+
+        &__content {
+            padding-top: 0;
+        }
+
+        &__content::before, &__content::after {
+            top: 100px;
+        }
+
+        &__content::after {
+            top: 300px;
+        }
+    }
+}

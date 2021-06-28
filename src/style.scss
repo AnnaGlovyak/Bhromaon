@@ -1,0 +1,21 @@
+@import "reset";
+@import "variables";
+@import "home";
+@import "header";
+@import "why-choose-us";
+@import "way-to-book";
+@import "first-example";
+@import "second-example";
+@import "what-tourist-say";
+@import "footer";
+
+
+html,body {
+    height: 100%;
+    font-family: 'Aleo', serif;
+    font-family: 'Josefin Sans', sans-serif;
+}
+html {
+    font-size: 10px;
+}
+
